@@ -8,6 +8,8 @@ import { setCategories } from './store/category/categorySlice'
 import db, { storage } from './firebase'
 import { collection, getDocs } from "firebase/firestore"
 import { useDispatch } from 'react-redux'
+import glance from './assets/images/glance.png'
+import { Play } from './subcomponents/AllSvgs';
 
 
 const BgCover = styled.img`
@@ -38,6 +40,7 @@ const HowItWorks = styled.div`
     letter-spacing: 0em;
     text-align: center;
     margin-bottom: 50px;
+    text-transform: uppercase;
   }
 
   span {
@@ -59,6 +62,50 @@ const Categories = styled.div`
   }
 `
 
+const Glance = styled.div`
+  margin: 150px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+  }
+
+  & > div {
+    background: url(${glance}) no-repeat;
+    height: 73vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+`
+
+const FAQ = styled.div`
+  padding: 0 120px;
+
+  h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+`
 
 function App() {
 
@@ -98,6 +145,17 @@ function App() {
         <h2>Categories</h2>
         <CategoryItem/>
       </Categories>
+
+      <Glance>
+        <h2>A GLANCE AT OUR PRODUCT</h2>
+        <div>
+          <Play id='play'/>
+        </div>
+      </Glance>
+
+      <FAQ>
+        <h2>FAQs</h2>
+      </FAQ>
     </div>
   );
 }
