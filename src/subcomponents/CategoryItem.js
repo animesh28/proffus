@@ -43,8 +43,8 @@ function CategoryItem() {
         <Container>
             {
                 items ?
-                items.map(item => 
-                <Card>
+                items.map((item, key) => 
+                <Card key={key}>
                     <img src={item.imageURL} alt='img'/>
                     <h3>{item.name}</h3>
                 </Card>

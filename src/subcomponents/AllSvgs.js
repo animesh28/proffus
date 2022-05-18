@@ -14,3 +14,18 @@ export const Play = (props) => (
       />
     </svg>
   )
+
+export const Expand = (props) => (
+    <svg
+      width={40}
+      height={24}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M1.219 1.58a2.603 2.603 0 0 0 0 3.687L18.53 22.58a2.075 2.075 0 0 0 2.938 0L38.78 5.267a2.603 2.603 0 0 0 0-3.688 2.603 2.603 0 0 0-3.687 0L19.99 16.663 4.885 1.559c-1-1-2.666-1-3.666.02Z"
+        fill="#0E79BD"
+      />
+    </svg>
+  )
